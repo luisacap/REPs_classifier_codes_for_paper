@@ -1,7 +1,6 @@
-# REPs_classifier_codes_for_paper
-This repository is associated to the article "Identification and Classification of Relativistic Electron Precipitation Events Using Supervised Deep Learning" by L. Capannolo, W. Li and S. Huang (at Boston University), currently submitted and under review in the Frontiers journal.
+# This repository is associated to the article "Identification and Classification of Relativistic Electron Precipitation Events Using Supervised Deep Learning" by L. Capannolo, W. Li and S. Huang (at Boston University), currently submitted and under review in the Frontiers journal.
 
-Please contact me at  luisacap at bu.edu  if you are interested in the code/work.
+**Please contact me at  luisacap at bu.edu  if you are interested in the code/work.**
 
 
 
