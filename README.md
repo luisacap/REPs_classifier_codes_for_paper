@@ -27,3 +27,6 @@ We show an application of supervised deep learning in space sciences. We focus o
 <br> <br />
 **Funding:** This research is supported by the NSF grants AGS-1723588 and AGS-2019950, the NASA grants 80NSSC20K0698 and 80NSSC20K1270, and the Alfred P. Sloan Research Fellowship FG-2018-10936. SH would like to acknowledge the NASA FINESST Award 80NSSC21K1385.
 
+<br> <br />
+**Blog post**: https://blogs.bu.edu/luisacap/2024/02/11/applying-lstm-to-a-multi-class-classification-problem/
+
