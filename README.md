@@ -16,6 +16,7 @@ We show an application of supervised deep learning in space sciences. We focus o
 - paper_library.py: routines used in paper_load_model_poes_predictions.py
 
 - LSTM_scaler.joblib: normalization factors of the training dataset
+- See 2024 UPDATES below to use post-processing
 
 <br> <br />
 **Additional Information**
