@@ -162,8 +162,8 @@ def remove_unphysical(dataset_day,dataset_day_copy,start,stop,rep_num):
         E3_0 = np.array(dataset_day['e3_0'][i:f])
         E4_0 = np.array(dataset_day['e4_0'][i:f])
         E4_90 = np.array(dataset_day_copy['e4_90'][i:f])
-        if max(E4_0) < 181.81818*2.: continue
-        elif np.average(E4_90) <= 0: continue #discard event if E4_0 is < 2 count/s
+        if max(E4_0) < 181.81818*2.: continue #discard event if E4_0 is < 2 count/s
+        elif np.average(E4_90) <= 0: continue #discard event if E4_0 has -999 values (bad data)
         elif max(E4_0) <= max(E3_0): #and max(E3_0) <= max(E2_0) and max(E2_0) <= max(E1_0):
             start_new = np.append(start_new,start[ind])
             stop_new = np.append(stop_new,stop[ind])
