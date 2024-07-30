@@ -41,9 +41,9 @@ import paper_library_2023update as lib
 import pandas as pd
 import numpy as np
 
-yy = ['2021']              #year
-mm = ['01']                #month
-dd = ['03']                #day
+yy = ['2017']              #year
+mm = ['11']                #month
+dd = ['21']                #day
 sc = ['m01']               #spacecraft abbreviation
 sc_extended = ['metop01']  #spacecraft extended name
 
