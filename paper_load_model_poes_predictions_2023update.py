@@ -72,7 +72,7 @@ E4_90 = E4_90.values.reshape(len(E4_90), 1)
 
 dataset = np.concatenate((E1_0,E1_90,E2_0,E2_90,E3_0,E3_90,E4_0,E4_90),axis=1)
 dataset_day = pd.DataFrame(dataset, columns = ['e1_0','e1_90','e2_0','e2_90','e3_0','e3_90','e4_0','e4_90'])
-
+dataset_day_copy = dataset_day.copy()
 
 #%% 3. Pre-processes the POES/MetOp data
 cleaned_dataset_day, dataset_day = lib.preproc(dataset_day)
@@ -98,7 +98,6 @@ _ , rep_count, rep_locs = lib.clean_up(REPs, 0, rep_label)
 L  = day.variables['L_IGRF'][:]
 MLT = day.variables['MLT'][:]
 L  = L.values.reshape(len(L), 1)
-L  = L.values.reshape(len(L), 1)
 #interpolate negative values of L
 ind_L = np.where(L < 0)
 if len(ind_L) > 0:
@@ -121,6 +120,13 @@ dataset_day['L'] = L
 css_locs_Lshell = lib.filter_Lshell(css_locs,L,2.5,8.5)
 rep_locs_Lshell = lib.filter_Lshell(rep_locs,L,2.5,8.5)
 
+print('Number of identified REPs :', len(rep_locs_Lshell))
+print('Most probable REPs indices (locations) :', rep_locs_Lshell)
+print()
+print('Number of identified CSSs :', len(css_locs_Lshell))
+print('Most probable CSSs indices (locations):', css_locs_Lshell)
+print()
+
                 
 #%% 5. Post-processing
 # Add 3 points to the start-stop indices
@@ -136,7 +142,7 @@ css_shifted_start,css_shifted_stop,css_num = lib.join_nearby_events(css_shifted_
 rep_start_new,rep_stop_new,rep_num = lib.remove_unphysical(dataset_day,dataset_day_copy,rep_shifted_start,rep_shifted_stop,rep_num)
 css_start_new,css_stop_new,css_num = lib.remove_unphysical(dataset_day,dataset_day_copy,css_shifted_start,css_shifted_stop,css_num)
             
-
+print('After post-processing....')
 print('Number of identified REPs :', rep_num)
 print('Most probable REPs start indices (locations) :', rep_start_new)
 print('Most probable REPs stop indices (locations) :', rep_stop_new)

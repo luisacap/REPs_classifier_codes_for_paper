@@ -29,11 +29,6 @@ def preproc(raw_df):
     
     cleaned_df = raw_df.copy()
     
-    cleaned_df['r1'] = cleaned_df['e1_0']/cleaned_df['e1_90']
-    cleaned_df['r2'] = cleaned_df['e2_0']/cleaned_df['e2_90']
-    cleaned_df['r3'] = cleaned_df['e3_0']/cleaned_df['e3_90']
-    cleaned_df['r4'] = cleaned_df['e4_0']/cleaned_df['e4_90']
-    
     eps = 0.001 
     cleaned_df['Log e1_0']  = np.log(cleaned_df.pop('e1_0')  + eps)
     cleaned_df['Log e1_90'] = np.log(cleaned_df.pop('e1_90') + eps)
@@ -43,10 +38,6 @@ def preproc(raw_df):
     cleaned_df['Log e3_90'] = np.log(cleaned_df.pop('e3_90') + eps)
     cleaned_df['Log e4_0']  = np.log(cleaned_df.pop('e4_0')  + eps)
     cleaned_df['Log e4_90'] = np.log(cleaned_df.pop('e4_90') + eps)
-    cleaned_df['Log r1'] = np.log(cleaned_df.pop('r1') + eps)
-    cleaned_df['Log r2'] = np.log(cleaned_df.pop('r2') + eps)
-    cleaned_df['Log r3'] = np.log(cleaned_df.pop('r3') + eps)
-    cleaned_df['Log r4'] = np.log(cleaned_df.pop('r4') + eps)
     
     return cleaned_df, raw_df
 
