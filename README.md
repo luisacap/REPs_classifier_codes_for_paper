@@ -21,7 +21,7 @@ We show an application of supervised deep learning in space sciences. We focus o
 <br> <br />
 **Additional Information**
 
-- POES/MetOp data are available at: https://satdat.ngdc.noaa.gov/sem/poes/data/processed/ngdc/uncorrected/full/
+- POES/MetOp data are available at: https://www.ncei.noaa.gov/data/poes-metop-space-environment-monitor/access/l1b/v01r00/ ~~https://satdat.ngdc.noaa.gov/sem/poes/data/processed/ngdc/uncorrected/full/~~
 
 - The dataset preparation and model training are done on a Linux OS (version 3.10.0-1160.49.1.el7.x86_64) machine (Shared Computer Cluster at Boston University) in Python (version 3.8.6), using the TensorFlow library (version 2.5.0, https://www.tensorflow.org) and the Python packages: Matplotlib (https://matplotlib.org), Scikit Learn (https://scikit-learn.org/stable/), Xarray (https://xarray.pydata.org/en/stable/), Joblib (https://joblib.readthedocs.io/en/latest/), Seaborn (https://seaborn.pydata.org/), Numpy (https://numpy.org), and Pandas (https://pandas.pydata.org)
 
