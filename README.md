@@ -30,3 +30,5 @@ We show an application of supervised deep learning in space sciences. We focus o
 <br> <br />
 **Blog post**: https://blogs.bu.edu/luisacap/2024/02/11/applying-lstm-to-a-multi-class-classification-problem/
 
+<br> <br />
+**July 2024 UPDATES**: post-processing has been added in paper_library_2023update.py. To load the trained model, with post-processing, use paper_load_model_poes_predictions_2023update.py
