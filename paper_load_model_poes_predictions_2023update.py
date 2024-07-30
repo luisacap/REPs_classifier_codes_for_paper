@@ -6,19 +6,12 @@ Created on Mon Oct 30 17:49:16 2023
 @author: luisacap
 """
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 30 16:56:12 2022
-
-@author: luisacap
-"""
-
 # THIS SAMPLE CODE
 # 1. Loads the saved model and normalization
 # 2. Loads one date of POES/MetOp data
 # 3. Pre-processes the POES/MetOp data
 # 4. Provides the REPs and CSSs in the outer radiation belt (2.5<l<8.5) for the selected POES/MetOp date
+# 5. Post-processing of the results
 
 
 #%% 1. Load the saved model and normalization
@@ -144,11 +137,13 @@ rep_start_new,rep_stop_new,rep_num = lib.remove_unphysical(dataset_day,dataset_d
 css_start_new,css_stop_new,css_num = lib.remove_unphysical(dataset_day,dataset_day_copy,css_shifted_start,css_shifted_stop,css_num)
             
 
-print('Number of identified REPs :', len(rep_locs_Lshell))
-print('Most probable REPs indices (locations) :', rep_locs_Lshell)
+print('Number of identified REPs :', rep_num)
+print('Most probable REPs start indices (locations) :', rep_start_new)
+print('Most probable REPs stop indices (locations) :', rep_stop_new)
 print()
-print('Number of identified CSSs :', len(css_locs_Lshell))
-print('Most probable CSSs indices (locations):', css_locs_Lshell)
+print('Number of identified CSSs :', css_num)
+print('Most probable CSSs start indices (locations):', css_start_new)
+print('Most probable CSSs stop indices (locations):', css_stop_new)
 print()
 
  
